@@ -16,6 +16,7 @@ var objUser = {
     })
   },
   createOneUser: function (req, res) {
+    console.log(req.body);
     modelUser.findOne({ username: req.body.username }, function (err, data) {
       if (err) throw err
       if (data) {
@@ -23,7 +24,6 @@ var objUser = {
       } else {
         // create a new user
         var newUser = modelUser({
-          name: req.body.name,
           username: req.body.username,
           password: passwordHash.generate(req.body.password)
         })
@@ -35,8 +35,8 @@ var objUser = {
       }
     })
   },
-  editOneUser: function (req, res) {},
-  deleteOneUser: function (req, res) {},
+  // editOneUser: function (req, res) {},
+  // deleteOneUser: function (req, res) {},
   login: function (req, res) {
     console.log('masuk login')
     modelUser.findOne({ username: req.body.username }, function (err, data) {

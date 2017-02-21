@@ -10,9 +10,9 @@ router.get('/:username', controllerUser.getOneUser)
 /* create new user : http://localhost:3000/api/users/ */
 router.post('/', controllerUser.createOneUser)
 /* edit one user | http://localhost:3000/api/users/ */
-router.put('/', controllerUser.editOneUser)
+// router.put('/', controllerUser.editOneUser)
 /* delete one user | http://localhost:3000/api/users/ */
-router.delete('/', controllerUser.deleteOneUser)
+// router.delete('/', controllerUser.deleteOneUser)
 /* create new user : http://localhost:3000/api/users/login */
 router.post('/login', controllerUser.login)
 
